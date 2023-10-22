@@ -7,14 +7,22 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://repo.maven.apache.org/maven2/org/flywaydb/flyway-core/8.0.8/flyway-core-8.0.8.pom"
+    }
+    maven {
+        url "https://mvnrepository.com/artifact/org.flywaydb/flyway-core"
+    }
 }
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
-    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.27'
-    implementation group: 'org.flywaydb', name: 'flyway-core', version: '8.0.8'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
+    implementation 'org.flywaydb:flyway-core:9.22.3'
+    implementation 'org.apache.logging.log4j:log4j-core:2.21.0'
+    implementation 'log4j:log4j:1.2.17'
 }
 
 test {
